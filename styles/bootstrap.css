@@ -3989,17 +3989,17 @@ input[type="button"].btn-block {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-
 .navbar-brand {
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  margin-left: 45%;
-  font-size: 1.75rem;
+  margin-left: 40%;
+  font-size: 1.5rem;
   line-height: inherit;
   white-space: nowrap;
 }
+
 
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
