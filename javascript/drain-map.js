@@ -38,7 +38,7 @@ function initMap() {
             "Current": "1.2",
             "lat": 51.512820,
             "lng": -0.151820,
-            "iconImage": "../drainbine/images/good-drain.png"
+            "iconImage": "../images/good-drain.png"
         },
         {
             "ID": "2",
@@ -46,7 +46,7 @@ function initMap() {
             "Current": "1.3",
             "lat": 51.512775,
             "lng": -0.151996,
-            "iconImage": "../drainbine/images/good-drain.png"
+            "iconImage": "../images/good-drain.png"
         },
         {
             "ID": "3",
@@ -54,7 +54,7 @@ function initMap() {
             "Current": "1.4",
             "lat": 51.513388,
             "lng": -0.150302,
-            "iconImage": "../drainbine/images/good-drain.png"
+            "iconImage": "../images/good-drain.png"
         }
     ]
 
