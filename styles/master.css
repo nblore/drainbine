@@ -1,0 +1,36 @@
+
+/* FOR PHONE */
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    main {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .image {
+        width: 100%;
+    }
+    header {
+
+    }
+    
+  }
+
+
+
+/* FOR DESKTOP */
+  
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+  
+    main {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .image {
+        width: 100%;
+    }
+    
+  }
+
