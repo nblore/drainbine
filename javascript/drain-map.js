@@ -61,23 +61,12 @@ function initMap() {
                 lat: drain.lat,
                 lng: drain.lng
             },
-            content: `<h5>Drain ${drain.ID}</h5><p>The drain's status is: ${drain.CurrentState}</p><p>Current: ${drain.Current}`
+            content: `<h5>Drain ${drain.ID}</h5><p>The drain's status is: ${drain.CurrentState}</p><p>Current: ${drain.Current}`,
+            iconImage: drain.iconImage
         }
     ))
     console.log(newMarkers)
 
-
-    // List of markers defined by properties
-    // var markers = [
-    //     {
-    //         coords: { lat: 51.512872, lng: -0.150738 },
-    //         content: "<h5>Your location</h5>"
-    //     },
-    //     {
-    //         coords:{},
-    //         content:
-    //     }
-    // ];
     // Loop to create as many markers as defined in array list above
     for (var i = 0; i < newMarkers.length; i++) {
         addMarker(newMarkers[i]);
