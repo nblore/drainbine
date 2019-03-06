@@ -17,7 +17,7 @@ function initMap() {
         });
         // iconImage = link to what the icon looks like
         if (properties.iconImage) {
-            newMarker.setIcon(properties.iconImage);
+            marker.setIcon(properties.iconImage);
         }
         // Information that shows when the icon is clicked
         if (properties.content) {
@@ -37,25 +37,28 @@ function initMap() {
             "CurrentState": "\"On\"",
             "Current": "1.2",
             "lat": 51.512820,
-            "lng": -0.151820
+            "lng": -0.151820,
+            "iconImage": "../drainbine/images/good-drain.png"
         },
         {
             "ID": "2",
             "CurrentState": "\"On\"",
             "Current": "1.3",
             "lat": 51.512775,
-            "lng": -0.151996
+            "lng": -0.151996,
+            "iconImage": "../drainbine/images/good-drain.png"
         },
         {
             "ID": "3",
             "CurrentState": "\"On\"",
             "Current": "1.4",
             "lat": 51.513388,
-            "lng": -0.150302
+            "lng": -0.150302,
+            "iconImage": "../drainbine/images/good-drain.png"
         }
     ]
 
-    let newMarkers = dataFromAPI.map((drain) => (
+    let drainMarkers = dataFromAPI.map((drain) => (
         {
             coords: {
                 lat: drain.lat,
@@ -65,11 +68,10 @@ function initMap() {
             iconImage: drain.iconImage
         }
     ))
-    console.log(newMarkers)
+    console.log(drainMarkers)
 
     // Loop to create as many markers as defined in array list above
-    for (var i = 0; i < newMarkers.length; i++) {
-        addMarker(newMarkers[i]);
-        addMarker(newMarkers[i]);
+    for (var i = 0; i < drainMarkers.length; i++) {
+        addMarker(drainMarkers[i]);
     }
 }
