@@ -32,51 +32,55 @@ function initMap() {
 
     let dataFromAPI = [
 
-        {        
-          "ID": "1",        
-          "CurrentState": "\"On\"",        
-          "Current": "1.2",       
-        },       
-        {        
-        "ID": "1",        
-        "CurrentState": "\"On\"",       
-        "Current": "1.3"       
-        },      
-        {      
-          "ID": "1",        
-          "CurrentState": "\"On\"",       
-          "Current": "1.4"         
-        }     
+        {
+            "ID": "1",
+            "CurrentState": "\"On\"",
+            "Current": "1.2",
+            "lat": 51.512820,
+            "lng": -0.151820
+        },
+        {
+            "ID": "2",
+            "CurrentState": "\"On\"",
+            "Current": "1.3",
+            "lat": 51.512775,
+            "lng": -0.151996
+        },
+        {
+            "ID": "3",
+            "CurrentState": "\"On\"",
+            "Current": "1.4",
+            "lat": 51.513388,
+            "lng": -0.150302
+        }
     ]
 
-    let newMarkers=dataFromAPI.map((drain) => (
+    let newMarkers = dataFromAPI.map((drain) => (
         {
-            coords: {lat:51.512820, lng:-0.151820},
+            coords: {
+                lat: drain.lat,
+                lng: drain.lng
+            },
             content: `<h5>Drain ${drain.ID}</h5><p>The drain's status is: ${drain.CurrentState}</p><p>Current: ${drain.Current}`
-            
-
         }
-        // {
-        //     coords: {lat:51.512775, lng:0.151996},
-        //     content: `<h5>Drain ${drain.ID}</h5>\n<p>The drain's status is: ${drain.CurrentState}</p>\n<p>Current: ${drain.Current}`
-        // }
     ))
+    console.log(newMarkers)
 
 
-        // List of markers defined by properties
-        // var markers = [
-        //     {
-        //         coords: { lat: 51.512872, lng: -0.150738 },
-        //         content: "<h5>Your location</h5>"
-        //     },
-        //     {
-        //         coords:{},
-        //         content:
-        //     }
-        // ];
-        // Loop to create as many markers as defined in array list above
-        for (var i = 0; i < newMarkers.length; i++) {
-            addMarker(newMarkers[i]);
-            addMarker(newMarkers[i]);
-        }
+    // List of markers defined by properties
+    // var markers = [
+    //     {
+    //         coords: { lat: 51.512872, lng: -0.150738 },
+    //         content: "<h5>Your location</h5>"
+    //     },
+    //     {
+    //         coords:{},
+    //         content:
+    //     }
+    // ];
+    // Loop to create as many markers as defined in array list above
+    for (var i = 0; i < newMarkers.length; i++) {
+        addMarker(newMarkers[i]);
+        addMarker(newMarkers[i]);
+    }
 }
