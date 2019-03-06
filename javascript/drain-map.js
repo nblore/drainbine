@@ -9,17 +9,6 @@ function initMap() {
     // Create map
     var map = new google.maps.Map(document.getElementById('map'), options);
 
-    // List of markers defined by properties
-    var markers = [
-        {
-            coords: { lat: 51.512872, lng: -0.150738 },
-            content: "<h5>Your location</h5>"
-        }
-    ];
-    // Loop to create as many markers as defined in array list above
-    for (var i = 0; i < markers.length; i++) {
-        addMarker(markers[i]);
-    }
     // Every icon has a position and is on the map
     function addMarker(properties) {
         var marker = new google.maps.Marker({
@@ -40,4 +29,17 @@ function initMap() {
             });
         }
     }
+
+    
+        // List of markers defined by properties
+        var markers = [
+            {
+                coords: { lat: 51.512872, lng: -0.150738 },
+                content: "<h5>Your location</h5>"
+            },
+        ];
+        // Loop to create as many markers as defined in array list above
+        for (var i = 0; i < markers.length; i++) {
+            addMarker(markers[i]);
+        }
 }
