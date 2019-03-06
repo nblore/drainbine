@@ -53,6 +53,7 @@ function initMap() {
         {
             coords: {lat:51.512820, lng:-0.151820},
             content: `<h5>Drain ${drain.ID}</h5><p>The drain's status is: ${drain.CurrentState}</p><p>Current: ${drain.Current}`
+            
 
         }
         // {
