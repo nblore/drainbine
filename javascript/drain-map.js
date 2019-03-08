@@ -82,6 +82,14 @@ function initMap() {
         },
     ]
 
+    const Http = new XMLHttpRequest();
+    const url='https://5r3gjpvrr4.execute-api.eu-west-2.amazonaws.com/dev/list';
+    Http.open("GET", url);
+    Http.send();
+    Http.onreadystatechange=(e)=>{
+    console.log(Http.responseText)
+    }
+
     let drainMarkers = dataFromAPI.map((drain) => (
         {
             coords: {
