@@ -3,7 +3,7 @@ function initMap() {
     // Set default map properties, zoom level and focus point
     var options = {
         zoom: 17,
-        center: { lat: 51.511524, lng: -0.151389 }
+        center: { lat: 51.512360, lng: -0.153165 }
     }
 
     // Create map
@@ -55,7 +55,31 @@ function initMap() {
             "lat": 51.513388,
             "lng": -0.150302,
             "iconImage": "../images/good-drain.png"
-        }
+        },
+        {
+            "ID": "4",
+            "CurrentState": "\"On\"",
+            "Current": "0.6",
+            "lat": 51.512487,
+            "lng": -0.149208,
+            "iconImage": "../images/warning-drain.png" 
+        },
+        {
+            "ID": "5",
+            "CurrentState": "\"On\"",
+            "Current": "1.4",
+            "lat": 51.513395,
+            "lng": -0.150280,
+            "iconImage": "../images/good-drain.png" 
+        },
+        {
+            "ID": "6",
+            "CurrentState": "\"Off\"",
+            "Current": "0.0",
+            "lat": 51.513008,
+            "lng": -0.151471,
+            "iconImage": "../images/bad-drain.png" 
+        },
     ]
 
     let drainMarkers = dataFromAPI.map((drain) => (
@@ -68,10 +92,20 @@ function initMap() {
             iconImage: drain.iconImage
         }
     ))
-    console.log(drainMarkers)
+
+    var locationMarker = new google.maps.Marker(
+        {
+            position: {lat:51.512360,lng:-0.153165}, 
+            map: map, 
+            content: `<h5>Your location</h5>`
+        });
+
+    locationMarker(content);
+
 
     // Loop to create as many markers as defined in array list above
     for (var i = 0; i < drainMarkers.length; i++) {
         addMarker(drainMarkers[i]);
     }
+
 }
