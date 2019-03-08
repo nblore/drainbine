@@ -107,7 +107,7 @@ function initMap() {
                 lat: drain.lat,
                 lng: drain.lng
             },
-            content: `<h5>Drain ${drain.ID}</h5><Time: ${drain.time}<p>The drain's status is: ${drain.CurrentState}</p><p>Current: ${drain.Current}`,
+            content: `<h5>Drain ${drain.ID}</h5><p>Time: ${drain.time}</p><p>The drain's status is: ${drain.CurrentState}</p><p>Current: ${drain.Current}`,
             iconImage: drain.iconImage
         }
     ))
