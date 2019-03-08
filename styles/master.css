@@ -9,7 +9,7 @@
 
     #map{
         width: 100%;
-        height: 450px;
+        height: 350px;
     }
 
   }
@@ -28,7 +28,7 @@
     }
     #map{
         width: 100%;
-        height: 700px;
+        height: 600px;
     }
     header {
         padding-bottom: 2%;
