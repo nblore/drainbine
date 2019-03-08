@@ -93,14 +93,6 @@ function initMap() {
         }
     ))
 
-    var locationMarker = new google.maps.Marker(
-        {
-            position: {lat:51.512360,lng:-0.153165}, 
-            map: map, 
-            content: `<h5>Your location</h5>`
-        });
-
-    locationMarker(content);
 
 
     // Loop to create as many markers as defined in array list above
