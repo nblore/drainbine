@@ -38,7 +38,9 @@ function initMap() {
             "Current": "1.2",
             "lat": 51.512820,
             "lng": -0.151820,
-            "iconImage": "../images/good-drain.png"
+            "iconImage": "../images/good-drain.png",
+            "time": "15:00"
+
         },
         {
             "ID": "2",
@@ -46,7 +48,8 @@ function initMap() {
             "Current": "1.3",
             "lat": 51.512775,
             "lng": -0.151996,
-            "iconImage": "../images/good-drain.png"
+            "iconImage": "../images/good-drain.png",
+            "time": "15:00"
         },
         {
             "ID": "3",
@@ -54,7 +57,8 @@ function initMap() {
             "Current": "1.4",
             "lat": 51.513388,
             "lng": -0.150302,
-            "iconImage": "../images/good-drain.png"
+            "iconImage": "../images/good-drain.png",
+            "time": "15:00"
         },
         {
             "ID": "4",
@@ -62,7 +66,8 @@ function initMap() {
             "Current": "0.6",
             "lat": 51.512487,
             "lng": -0.149208,
-            "iconImage": "../images/warning-drain.png" 
+            "iconImage": "../images/warning-drain.png",
+            "time": "15:00"
         },
         {
             "ID": "5",
@@ -70,7 +75,8 @@ function initMap() {
             "Current": "1.4",
             "lat": 51.513395,
             "lng": -0.150280,
-            "iconImage": "../images/good-drain.png" 
+            "iconImage": "../images/good-drain.png",
+            "time": "15:00"
         },
         {
             "ID": "6",
@@ -78,7 +84,8 @@ function initMap() {
             "Current": "0.0",
             "lat": 51.513008,
             "lng": -0.151471,
-            "iconImage": "../images/bad-drain.png" 
+            "iconImage": "../images/bad-drain.png",
+            "time": "15:00" 
         },
         {
             "lat": 51.512360,
@@ -100,7 +107,7 @@ function initMap() {
                 lat: drain.lat,
                 lng: drain.lng
             },
-            content: `<h5>Drain ${drain.ID}</h5><p>The drain's status is: ${drain.CurrentState}</p><p>Current: ${drain.Current}`,
+            content: `<h5>Drain ${drain.ID}</h5><Time: ${drain.time}<p>The drain's status is: ${drain.CurrentState}</p><p>Current: ${drain.Current}`,
             iconImage: drain.iconImage
         }
     ))
