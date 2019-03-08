@@ -80,6 +80,10 @@ function initMap() {
             "lng": -0.151471,
             "iconImage": "../images/bad-drain.png" 
         },
+        {
+            "lat": 51.512360,
+            "lng": -0.153165,
+        }
     ]
 
     const Http = new XMLHttpRequest();
